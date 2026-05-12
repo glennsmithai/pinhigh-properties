@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pin High Properties | Direct Booking Vacation Rentals</title>
+  <meta name="description" content="Pin High Properties — premium direct booking vacation rentals in Baton Rouge, Fort Worth, and Panama City Beach. Book direct, skip the fees."/>
+  <link rel="stylesheet" href="/static/css/style.css"/>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo"><span style="color:var(--gold)">Pin High</span> Properties</a>
+  <div class="nav-links">
+    <a href="/br-blues">BR Blues</a>
+    <a href="/oleander">Oleander</a>
+    <a href="/surf-shack">Surf Shack</a>
+    <a href="/#properties" class="nav-cta">Book Direct</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="home-hero">
+  <div class="badge">⭐ 4-Year Superhost · 250+ Five-Star Reviews</div>
+  <h1><span class="line1">Your Next Getaway</span><span class="line2">Starts Here</span></h1>
+  <p>Book direct with Pin High Properties — no platform fees, no hassle.</p>
+  <div class="hero-search">
+    <div class="hero-search-field-wrap">
+      <span class="hero-search-label">Where</span>
+      <select onchange="if(this.value && this.value !== 'any') window.location=this.value">
+        <option value="any">Anywhere</option>
+        <option value="/br-blues">Baton Rouge, LA</option>
+        <option value="/oleander">Fort Worth, TX</option>
+        <option value="/surf-shack">Panama City, FL</option>
+      </select>
+    </div>
+    <div class="hero-search-field-wrap">
+      <span class="hero-search-label">Check In</span>
+      <input type="date" placeholder="Add dates"/>
+    </div>
+    <div class="hero-search-field-wrap">
+      <span class="hero-search-label">Guests</span>
+      <input type="number" min="1" max="10" placeholder="1 guest"/>
+    </div>
+    <button class="hero-search-btn" onclick="document.getElementById('properties').scrollIntoView({behavior:'smooth'})">🔍 Search</button>
+  </div>
+</div>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item">
+    <div class="num">250+</div>
+    <div class="label">Five-Star Reviews</div>
+  </div>
+  <div class="trust-item">
+    <div class="num">4yr</div>
+    <div class="label">Superhost Status</div>
+  </div>
+  <div class="trust-item">
+    <div class="num">3</div>
+    <div class="label">Unique Properties</div>
+  </div>
+  <div class="trust-item">
+    <div class="num">0%</div>
+    <div class="label">Platform Fees</div>
+  </div>
+</div>
+
+<!-- PROPERTIES -->
+<div class="section-wrap" id="properties">
+  <div class="section-label">Our Properties</div>
+  <h2 class="section-title">Choose Your Getaway</h2>
+  <p class="section-sub">Three one-of-a-kind stays across the South — each newly built, fully loaded, and hosted by the same 4-year Superhost.</p>
+
+  <div class="properties-grid">
+
+    <!-- BR Blues -->
+    <a href="/br-blues" class="property-card">
+      <div class="card-img br-blues">
+        <div class="card-badge">Baton Rouge, LA</div>
+        <div class="card-location">📍 5 min from LSU</div>
+      </div>
+      <div class="card-body">
+        <h3>Baton Rouge Blues</h3>
+        <div class="card-stats">
+          <div class="card-stat">👥 Up to 8 guests</div>
+          <div class="card-stat">🛏 3 BR / 2 BA</div>
+          <div class="card-stat">🐾 Pet friendly</div>
+        </div>
+        <p>Gameroom getaway with foosball, arcade, mini golf, fire pit, and outdoor gym — steps from LSU.</p>
+        <span class="card-cta">Book This Property →</span>
+      </div>
+    </a>
+
+    <!-- Oleander -->
+    <a href="/oleander" class="property-card">
+      <div class="card-img oleander">
+        <div class="card-badge">Fort Worth, TX</div>
+        <div class="card-location">📍 4 min from Downtown</div>
+      </div>
+      <div class="card-body">
+        <h3>Oleander</h3>
+        <div class="card-stats">
+          <div class="card-stat">👥 Up to 10 guests</div>
+          <div class="card-stat">🛏 3 BR / 2 BA</div>
+          <div class="card-stat">🐾 Pet friendly</div>
+        </div>
+        <p>Modern city retreat with a gameroom, private home gym, patio oasis — minutes from the Stockyards and TCU.</p>
+        <span class="card-cta">Book This Property →</span>
+      </div>
+    </a>
+
+    <!-- Surf Shack -->
+    <a href="/surf-shack" class="property-card">
+      <div class="card-img surf-shack">
+        <div class="card-badge">Panama City, FL</div>
+        <div class="card-location">📍 7 min walk to beach</div>
+      </div>
+      <div class="card-body">
+        <h3>Surf Shack</h3>
+        <div class="card-stats">
+          <div class="card-stat">👥 Up to 6 guests</div>
+          <div class="card-stat">🛏 1 BR / 1 BA</div>
+          <div class="card-stat">🐾 Pet friendly</div>
+        </div>
+        <p>Beach escape with a loft arcade, mini golf, fire pit, and backyard oasis — 7 min walk to the beach.</p>
+        <span class="card-cta">Book This Property →</span>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+<!-- WHY BOOK DIRECT -->
+<div style="background: var(--light); padding: 90px 0;" id="why">
+  <div class="section-wrap" style="padding-top:0; padding-bottom:0;">
+    <div class="section-label">Why Book Direct</div>
+    <h2 class="section-title">Skip the Platform. Book With Your Host.</h2>
+    <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(240px,1fr)); gap:24px; margin-top:40px;">
+      <div style="padding:28px; background:var(--white); border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+        <div style="font-size:2rem; margin-bottom:12px;">💸</div>
+        <div style="font-weight:700; font-size:1rem; margin-bottom:8px; color:var(--primary);">No Service Fees</div>
+        <div style="font-size:0.88rem; color:var(--muted); line-height:1.6;">Skip Airbnb's 14%+ guest fees. What you see is what you pay.</div>
+      </div>
+      <div style="padding:28px; background:var(--white); border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+        <div style="font-size:2rem; margin-bottom:12px;">🤝</div>
+        <div style="font-weight:700; font-size:1rem; margin-bottom:8px; color:var(--primary);">Direct Host Contact</div>
+        <div style="font-size:0.88rem; color:var(--muted); line-height:1.6;">Talk directly with your host — faster responses, personalized service.</div>
+      </div>
+      <div style="padding:28px; background:var(--white); border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+        <div style="font-size:2rem; margin-bottom:12px;">⭐</div>
+        <div style="font-weight:700; font-size:1rem; margin-bottom:8px; color:var(--primary);">Verified Superhost</div>
+        <div style="font-size:0.88rem; color:var(--muted); line-height:1.6;">4-year Airbnb Superhost with 250+ five-star reviews. You're in good hands.</div>
+      </div>
+      <div style="padding:28px; background:var(--white); border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+        <div style="font-size:2rem; margin-bottom:12px;">🔁</div>
+        <div style="font-weight:700; font-size:1rem; margin-bottom:8px; color:var(--primary);">Flexible &amp; Easy</div>
+        <div style="font-size:0.88rem; color:var(--muted); line-height:1.6;">Simple inquiry form, fast confirmation, and flexible arrangements for returning guests.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo"><span style="color:var(--gold)">Pin High</span> Properties</div>
+    <div class="footer-links">
+      <a href="/br-blues">Baton Rouge Blues</a>
+      <a href="/oleander">Oleander – Fort Worth</a>
+      <a href="/surf-shack">Surf Shack – Panama City</a>
+    </div>
+    <div class="footer-copy">© 2026 Pin High Properties · All rights reserved · Book direct, stay better.</div>
+  </div>
+</footer>
+
+</body>
+</html>
