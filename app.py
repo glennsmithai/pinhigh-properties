@@ -8,8 +8,8 @@ from datetime import datetime
 
 app = Flask(__name__)
 
-OWNER_EMAIL = "fuhrealdeals@gmail.com"
-SMTP_USER = "fuhrealdeals@gmail.com"
+OWNER_EMAIL = "pinhighprops@gmail.com"
+SMTP_USER = "pinhighprops@gmail.com"
 SMTP_PASS = ""  # fill in Gmail app password
 
 @app.route("/")
@@ -27,6 +27,10 @@ def oleander():
 @app.route("/surf-shack")
 def surf_shack():
     return render_template("surf_shack.html")
+
+@app.route("/gameroom-paradise")
+def gameroom_paradise():
+    return render_template("gameroom_paradise.html")
 
 EXPENSE_LOG = os.path.expanduser("~/rental-tracker/expenses.log")
 
@@ -56,12 +60,14 @@ def inquire():
     checkout = data.get("checkout", "")
     guests = data.get("guests", "")
     message = data.get("message", "")
+    signature = data.get("signature", "")
 
     inquiry = {
         "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "property": property_name, "name": name, "email": email,
         "phone": phone, "checkin": checkin, "checkout": checkout,
-        "guests": guests, "message": message
+        "guests": guests, "message": message,
+        "waiver_signed": signature, "waiver_signed_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     }
     with open("inquiries.log", "a") as f:
         f.write(json.dumps(inquiry) + "\n")
@@ -80,6 +86,10 @@ Guests: {guests}
 
 Message:
 {message}
+
+--- RENTAL AGREEMENT ---
+Waiver Signed By: {signature}
+Signed At: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
 """
         msg = MIMEMultipart()
         msg["From"] = SMTP_USER

@@ -243,6 +243,11 @@ nav {
   background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)),
               url('/static/img/surf-shack-hero.jpg') center/cover no-repeat;
 }
+.card-img.gameroom-paradise {
+  background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)),
+              url('/static/img/gameroom-paradise/hero.jpg') center/cover no-repeat,
+              linear-gradient(135deg, #065f46 0%, #1c4532 100%);
+}
 .card-badge {
   position: absolute; top: 14px; left: 14px;
   background: #fff; color: var(--navy);

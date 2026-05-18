@@ -15,6 +15,7 @@
     <a href="/br-blues">BR Blues</a>
     <a href="/oleander">Oleander</a>
     <a href="/surf-shack">Surf Shack</a>
+    <a href="/gameroom-paradise">NOLA Paradise</a>
     <a href="#book" class="nav-cta">Book Direct</a>
   </div>
 </nav>
@@ -330,6 +331,44 @@
         </label>
       </div>
 
+
+      <!-- RENTAL AGREEMENT / LIABILITY WAIVER -->
+      <div class="form-group full" style="background:#fff8f8; border:1px solid #c0392b; border-radius:10px; padding:18px 20px;">
+        <div style="display:flex; align-items:flex-start; gap:12px; margin-bottom:12px;">
+          <div style="font-size:1.4rem; line-height:1;">📋</div>
+          <div>
+            <div style="font-weight:700; font-size:0.95rem; color:#1c2b3a; margin-bottom:4px;">Rental Agreement & Liability Waiver</div>
+            <div style="font-size:0.82rem; color:#555;">Please read the full agreement below, then type your legal name to sign.</div>
+          </div>
+        </div>
+        <div style="max-height:220px; overflow-y:auto; background:#fff; border:1px solid #ddd; border-radius:8px; padding:16px 18px; font-size:0.8rem; color:#444; line-height:1.7; margin-bottom:14px;">
+          <strong>RENTAL AGREEMENT & LIABILITY WAIVER — PIN HIGH PROPERTIES</strong><br/><br/>
+          By signing this agreement, the Guest ("Guest") agrees to the following terms and conditions governing their stay at the Pin High Properties short-term rental ("Property"):<br/><br/>
+          <strong>1. ASSUMPTION OF RISK & LIABILITY WAIVER</strong><br/>
+          Guest acknowledges that use of the Property and all amenities — including but not limited to the swimming pool, fire pit, outdoor areas, game equipment, and any recreational features — involves inherent risk of injury or death. Guest voluntarily assumes all such risks. Guest, on behalf of themselves and all members of their party, hereby waives and releases Pin High Properties and its owner(s), agents, and representatives from any and all claims, damages, liabilities, costs, or expenses (including legal fees) arising from personal injury, illness, accident, or death occurring during their stay, to the fullest extent permitted by law.<br/><br/>
+          <strong>2. PROPERTY DAMAGE</strong><br/>
+          Guest agrees to be personally responsible for any and all damage caused to the Property, its furnishings, fixtures, or equipment during their stay, whether caused by Guest, members of their party, or any other individual permitted access to the Property by Guest. Guest authorizes the owner to charge the credit card on file or pursue payment by any lawful means for the cost of repairs, replacement, or cleaning beyond normal wear and tear.<br/><br/>
+          <strong>3. POOL & WATER SAFETY</strong><br/>
+          Guest acknowledges that the pool is unsupervised. NO DIVING is permitted at any time. Children must be supervised by an adult at all times near the pool. Guest assumes full responsibility for the safety of all members of their party around water. The owner is not liable for any pool-related accident, injury, or death.<br/><br/>
+          <strong>4. INDEMNIFICATION</strong><br/>
+          Guest agrees to indemnify, defend, and hold harmless Pin High Properties and its owner(s) from any claims, actions, damages, liability, and expense in connection with loss of life, personal injury, or damage to property arising from Guest's use of the Property or any breach of this Agreement.<br/><br/>
+          <strong>5. HOUSE RULES</strong><br/>
+          Guest agrees to abide by all posted house rules, including but not limited to: noise curfew, no smoking, maximum occupancy, no unregistered guests, and pet policies. Violation of house rules may result in immediate removal from the Property without refund.<br/><br/>
+          <strong>6. GOVERNING LAW</strong><br/>
+          This Agreement shall be governed by the laws of the state in which the Property is located. If any provision is found unenforceable, the remaining provisions shall remain in full effect.<br/><br/>
+          <strong>7. ENTIRE AGREEMENT</strong><br/>
+          This Agreement constitutes the entire agreement between the parties. By typing your name below, you acknowledge that you have read, understood, and agree to be bound by all terms and conditions set forth herein.
+        </div>
+        <label style="display:flex; align-items:flex-start; gap:10px; margin-bottom:12px; cursor:pointer;">
+          <input type="checkbox" id="waiverAck" required style="margin-top:3px; width:16px; height:16px; flex-shrink:0; accent-color:#c0392b;"/>
+          <span style="font-size:0.85rem; color:#444; line-height:1.5;">I have read and fully understand the Rental Agreement & Liability Waiver above, and I agree to be bound by its terms on behalf of myself and all members of my party. *</span>
+        </label>
+        <div class="form-group" style="margin:0;">
+          <label style="font-size:0.85rem; font-weight:700; color:#c0392b;">Type your full legal name to sign *</label>
+          <input type="text" id="signature" required placeholder="Your full legal name" style="border-color:#c0392b;"/>
+        </div>
+        <div style="font-size:0.75rem; color:#888; margin-top:8px;">✍️ Typed signature is legally binding. Signed date and time will be recorded with your inquiry.</div>
+      </div>
       <button type="submit" class="submit-btn">Send Inquiry →</button>
       <p class="form-note">We'll reach out within a few hours with availability and payment details.</p>
       <div class="success-msg" id="successMsg">✅ Inquiry sent! We'll be in touch shortly.</div>
@@ -369,6 +408,7 @@
       checkin: document.getElementById("checkin").value,
       checkout: document.getElementById("checkout").value,
       message: document.getElementById("message").value,
+      signature: document.getElementById("signature").value,
     };
     try {
       const res = await fetch("/inquire", { method: "POST", headers: {"Content-Type":"application/json"}, body: JSON.stringify(data) });
