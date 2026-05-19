@@ -531,3 +531,8 @@
 127.0.0.1 - - [12/May/2026 17:10:13] "[36mGET /static/img/surf-shack-hero.jpg HTTP/1.1[0m" 304 -
 127.0.0.1 - - [12/May/2026 17:10:13] "GET /static/img/br-blues-hero.jpg HTTP/1.1" 200 -
 127.0.0.1 - - [12/May/2026 17:10:13] "[36mGET /static/img/oleander-hero.jpg HTTP/1.1[0m" 304 -
+127.0.0.1 - - [18/May/2026 13:58:16] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [18/May/2026 13:58:16] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+127.0.0.1 - - [18/May/2026 13:58:16] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+127.0.0.1 - - [18/May/2026 13:58:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [18/May/2026 15:28:31] "[33mGET /gameroom-paradise HTTP/1.1[0m" 404 -

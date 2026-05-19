@@ -297,6 +297,8 @@ nav {
   min-height: 82vh; position: relative;
   display: flex; flex-direction: column; justify-content: flex-end;
   padding: 0 60px 64px; overflow: hidden;
+  background-size: cover;
+  background-position: center 30%;
 }
 .prop-hero-bg { position: absolute; inset: 0; background: var(--bg3); }
 .prop-hero-overlay {
@@ -318,7 +320,7 @@ nav {
   font-weight: 600; letter-spacing: -1px;
   color: #fff; line-height: 1.05; margin-bottom: 18px;
 }
-.prop-hero-stats { display: flex; gap: 32px; flex-wrap: wrap; margin-bottom: 28px; }
+.prop-hero-stats { display: none; }
 .prop-hero-stat { color: rgba(255,255,255,0.78); font-size: 0.95rem; }
 .prop-hero-stat strong { color: #FF385C; font-size: 1.1rem; }
 
