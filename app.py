@@ -59,6 +59,7 @@ def inquire():
     checkin = data.get("checkin", "")
     checkout = data.get("checkout", "")
     guests = data.get("guests", "")
+    pets = data.get("pets", "No pets")
     message = data.get("message", "")
     signature = data.get("signature", "")
 
@@ -66,7 +67,7 @@ def inquire():
         "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "property": property_name, "name": name, "email": email,
         "phone": phone, "checkin": checkin, "checkout": checkout,
-        "guests": guests, "message": message,
+        "guests": guests, "pets": pets, "message": message,
         "waiver_signed": signature, "waiver_signed_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     }
     with open("inquiries.log", "a") as f:
@@ -83,6 +84,7 @@ Phone: {phone}
 Check-in: {checkin}
 Check-out: {checkout}
 Guests: {guests}
+Pets: {pets}
 
 Message:
 {message}
